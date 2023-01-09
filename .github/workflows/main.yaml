@@ -64,7 +64,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: oryx-build
         with:
-          app-location: "/"
+          app-location: "/api"
       - name: Docker image ls
         run: docker image ls --digests --no-trunc
  
