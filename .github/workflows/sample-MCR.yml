@@ -14,4 +14,4 @@ jobs:
         uses: snehapar9/jamstack-composite-action@snehapar/oryx-build
         id: oryx-build
         with:
-          app-location: ./
+          app-location: ./api
