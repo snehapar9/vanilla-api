@@ -1,16 +1,17 @@
 name: Run validation on action
 
 on:
+  # Automatically trigger it when detected changes in repo
   push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/container-app-sample-AutoDeployTrigger-f9592e1e-9d15-4236-90db-8a0f848e3493.yml'
+
+  # Allow mannually trigger 
+  workflow_dispatch:
+
 
 env:
   TEST_FULL_ACR_NAME: ${{ vars.TEST_ACR_NAME }}.azurecr.io
