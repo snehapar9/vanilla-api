@@ -42,7 +42,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Execute Azure Container Apps Build and Deploy Action
         uses: ./
@@ -90,7 +90,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Execute Azure Container Apps Build and Deploy Action
         uses: ./
@@ -137,7 +137,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
       - name: Install Azure-cli
         uses: elstudio/action-install-azure-cli@v1
       - name: Execute Azure Container Apps Build and Deploy Action
@@ -181,7 +181,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Execute Azure Container Apps Build and Deploy Action
         uses: ./
@@ -213,7 +213,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
       - name: Install Azure-cli
         uses: elstudio/action-install-azure-cli@v1         
 
@@ -248,7 +248,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
       - name: Install Azure-cli
         uses: elstudio/action-install-azure-cli@v1
       - name: Execute Azure Container Apps Build and Deploy Action
@@ -311,7 +311,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Update values in YAML configuration file
         shell: pwsh
@@ -370,7 +370,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Update values in YAML configuration file
         shell: pwsh
@@ -414,7 +414,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Update values in YAML configuration file
         shell: pwsh
@@ -458,7 +458,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Execute Azure Container Apps Build and Deploy Action
         uses: ./
@@ -500,7 +500,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Execute Azure Container Apps Build and Deploy Action
         uses: ./
@@ -529,7 +529,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Update values in YAML configuration file
         shell: pwsh
