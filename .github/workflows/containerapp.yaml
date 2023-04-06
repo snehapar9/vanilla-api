@@ -56,7 +56,8 @@ jobs:
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -104,7 +105,8 @@ jobs:
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -153,7 +155,8 @@ jobs:
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -191,7 +194,8 @@ jobs:
           containerAppEnvironment: ${{ vars.TEST_EXISTING_CONTAINER_APP_ENV }}
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -225,7 +229,8 @@ jobs:
           containerAppEnvironment: ${{ vars.TEST_EXISTING_CONTAINER_APP_ENV }}
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -259,7 +264,8 @@ jobs:
           containerAppEnvironment: ${{ env.TEST_NEW_CONTAINER_APP_ENV }}
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -277,6 +283,8 @@ jobs:
         run: |
           WORKSPACE_NAME=$(az monitor log-analytics workspace list -g ${{ vars.TEST_RESOURCE_GROUP_NAME }} --query '[?customerId == `${{ env.CUSTOMER_ID }}`].name | [0]')
           echo "WORKSPACE_NAME=${WORKSPACE_NAME}" >> $GITHUB_ENV
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt    
       - name: Delete created Azure Container App environment
         if: ${{ always() }}
         shell: bash
@@ -336,7 +344,8 @@ jobs:
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -385,7 +394,8 @@ jobs:
           containerAppName: ${{ env.TEST_CONTAINER_APP_NAME }}
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -429,7 +439,8 @@ jobs:
           containerAppName: ${{ env.TEST_CONTAINER_APP_NAME }}
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete created Azure Container App
         if: ${{ always() }}
         shell: bash
@@ -472,7 +483,8 @@ jobs:
           resourceGroup: ${{ vars.TEST_RESOURCE_GROUP_NAME }}
           imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }}
           disableTelemetry: ${{ vars.TEST_DISABLE_TELEMETRY }}
-
+      - name: Set dynamic install to false
+        run : az config set extension.use_dynamic_install=yes_without_prompt
       - name: Delete pushed image
         if: ${{ always() }}
         shell: bash
